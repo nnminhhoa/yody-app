@@ -1,0 +1,110 @@
+@import "../../scss/index.scss";
+
+.footer {
+  background-color: #1e1c56;
+  padding: 50px 0 20px 0;
+
+  &-main {
+    border-bottom: 1px solid rgb(83, 83, 83);
+
+    &__content {
+      & > * {
+        margin-bottom: 20px;
+      }
+      .title-content {
+        color: #fff;
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+        line-height: 1.8rem;
+      }
+
+      .image_icon-content {
+        & > * {
+          margin-right: 10px;
+        }
+
+        img {
+          transform: rotate(0);
+          transition: all 0.5s ease;
+          &:hover {
+            transform: rotate(30deg);
+          }
+        }
+      }
+
+      &-list > li {
+        @include flex(center, flex-start);
+        margin-bottom: 15px;
+
+        .footer-item_svg {
+          margin-right: 10px;
+        }
+
+        span {
+          color: #fff;
+          font-size: 1.15rem;
+        }
+
+        a {
+          display: block;
+          margin-bottom: 3px;
+          color: #fff;
+          font-size: 1.15rem;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+
+        b {
+          font-size: 1.2rem;
+          color: #fff;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+    &__list {
+      margin-left: 50px;
+
+      @include tablet {
+        margin-left: unset;
+      }
+      h2 {
+        color: #fff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      & > ul > li {
+        margin-bottom: 13px;
+        a {
+          color: #fff;
+          font-size: 1.1rem;
+
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    a {
+      color: $color-main;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

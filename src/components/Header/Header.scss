@@ -1,0 +1,479 @@
+@import "../../scss/index.scss";
+
+.header {
+  &-top__banner {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    @include tablet {
+      display: none;
+    }
+
+    img {
+      object-position: center center;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &-top {
+    @include flex(center, space-between);
+    @include tablet {
+      display: none;
+    }
+
+    &__list {
+      @include flex(center, center);
+
+      & > * {
+        margin-right: 15px;
+      }
+
+      &__item {
+        @include flex(center, center);
+        i {
+          margin-right: 6px;
+          font-size: 1.1rem;
+        }
+
+        span {
+          color: $txt-main;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+
+        b {
+          color: #ee4d2d;
+          font-size: 1.1rem;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+
+        &-img {
+          margin-left: 5px;
+        }
+      }
+      .lighting {
+        i {
+          color: #fcaf17;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+  &-main {
+    @include flex(center, space-between);
+    position: relative;
+    margin: 6px auto !important;
+
+    &__nav {
+      @include tablet {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+      &-list {
+        @include tablet {
+          width: 40%;
+          height: 100vh;
+          background-color: #fff;
+          transition: all 0.3s ease;
+          transform: translateX(-100%);
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        @include mobile {
+          width: 70%;
+        }
+      }
+      &-list > ul {
+        @include flex(center, center);
+        height: 40px;
+        @include tablet {
+          position: relative;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          height: 50%;
+          width: 100%;
+        }
+
+        & > li {
+          cursor: pointer;
+          @include flex(center, center);
+          height: 100%;
+          @include tablet {
+            border-bottom: 1px solid #f7f7f7;
+            width: 100%;
+            height: 10%;
+            justify-content: flex-start;
+            padding-left: 10px;
+          }
+
+          @include mobile {
+            height: 20%;
+          }
+          & > a {
+            color: $txt-main;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0 6px;
+            margin: 0 6px;
+            position: relative;
+            transition: all 0.3s ease;
+
+            @include mobile {
+              font-size: 1rem;
+            }
+
+            &:hover {
+              color: #ee4d2d;
+            }
+
+            &.active {
+              color: #ee4d2d;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 0;
+              height: 1px;
+              background-color: #ee4d2d;
+              bottom: -17px;
+              left: 0;
+              transition: width 0.5s ease;
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+        li a.active {
+          &::after {
+            width: 100%;
+          }
+        }
+        & > li > a::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 30px;
+          left: 0;
+          top: 10px;
+        }
+
+        & > li:hover .mega-menu {
+          display: block;
+          @include tablet {
+            display: none;
+          }
+        }
+
+        & > li:hover a::after {
+          width: 100%;
+        }
+
+        .mega-menu {
+          position: absolute;
+          top: calc(100% + 6px);
+          z-index: 99;
+          left: 0;
+          background-color: rgba($color: #000000, $alpha: 0.4);
+          width: 100%;
+          height: 100vh;
+          display: none;
+
+          &__list {
+            background-color: #fff;
+            width: 100%;
+            height: 400px;
+            @include flex(flex-start, space-between);
+            padding-top: 15px;
+            &-1 > a {
+              color: #000;
+              font-size: 1.2rem;
+              text-transform: uppercase;
+              font-weight: 600;
+
+              &:hover {
+                color: #ec3d1a;
+              }
+            }
+
+            .banner__nav {
+              width: 20%;
+              height: 350px;
+              overflow: hidden;
+            }
+
+            &-1 > ul {
+              margin-top: 18px;
+
+              & > * {
+                margin-bottom: 13px;
+              }
+              & > li > a {
+                color: $txt-main;
+                font-size: 1.2rem;
+                &:hover {
+                  color: #ec3d1a;
+                }
+              }
+            }
+            .collection-list {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+
+      &-close {
+        display: none;
+        @include tablet {
+          display: block;
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          i {
+            font-size: 2.5rem;
+            opacity: 0.7;
+
+            @include mobile {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .active {
+      @include tablet {
+        visibility: inherit;
+        opacity: 1;
+      }
+
+      .header-main__nav-list {
+        @include tablet {
+          visibility: inherit;
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &__search {
+      width: 200px;
+      height: 36px;
+
+      @include tablet {
+        width: 70%;
+      }
+      @include mobile {
+        width: 50%;
+      }
+
+      &-form {
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid transparent;
+        border: 1px solid #dde1ef;
+
+        @include tablet {
+          border-radius: 20px;
+        }
+
+        &:hover {
+          border-color: #f57056;
+        }
+
+        &:focus-within {
+          border-color: #f57056;
+        }
+
+        .btn-md__search {
+          display: none;
+          @include tablet {
+            display: block;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            margin-left: 8px;
+          }
+        }
+        input {
+          height: 100%;
+          width: 70%;
+          border: none;
+          outline: none;
+          padding-left: 15px;
+          font-size: 1.2rem;
+          color: $txt-main;
+          font-weight: 500;
+          opacity: 0.8;
+
+          @include tablet {
+            width: 100%;
+            padding-left: 5px;
+          }
+        }
+        .btn-big__search {
+          flex-grow: 1;
+          background-color: #ee4d2d;
+          border: none;
+          outline: none;
+          height: 100%;
+          cursor: pointer;
+
+          @include tablet {
+            display: none;
+          }
+
+          &:hover {
+            background-color: #ec3d1a;
+          }
+        }
+      }
+    }
+    &__tool {
+      @include flex(center, center);
+
+      & > * {
+        margin-right: 10px;
+      }
+
+      .user {
+        position: relative;
+        z-index: 10;
+
+        @include tablet {
+          display: none;
+        }
+
+        &:hover .user__header {
+          visibility: inherit;
+          opacity: 1;
+        }
+
+        &__header {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: calc(100% + 10px);
+          background-color: #fff;
+          width: 170px;
+          box-shadow: 0px 3px 25px 0px rgb(31 38 67 / 10%);
+          transition: all 0.3s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -18px;
+            right: 0;
+            width: 30px;
+            height: 20px;
+          }
+          li {
+            padding: 0 10px;
+            border-bottom: 1px solid #fcfcfc;
+            a {
+              padding: 7px 5px;
+              display: block;
+              color: $txt-main;
+              font-weight: 500;
+              font-size: 1.1rem;
+              text-transform: uppercase;
+              &:hover {
+                color: #ec3d1a;
+              }
+            }
+          }
+        }
+      }
+
+      .wishlist {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .cart {
+        position: relative;
+        z-index: 10;
+        a {
+          cursor: pointer;
+        }
+
+        &:hover .cart-content {
+          visibility: inherit;
+          opacity: 1;
+        }
+
+        &-content {
+          @include flex(flex-start, center);
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.3s ease;
+          position: absolute;
+          right: 0;
+          top: calc(100% + 10px);
+          background-color: #fff;
+          box-shadow: 0px 3px 25px 0px rgb(31 38 67 / 10%);
+          width: 470px;
+          height: 220px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -18px;
+            right: 0;
+            width: 30px;
+            height: 20px;
+          }
+
+          &__empty {
+            text-align: center;
+            margin-top: 26px;
+            p {
+              color: $txt-main;
+              font-size: 1rem;
+              font-weight: 500;
+              font-weight: 600;
+              margin-bottom: 15px;
+            }
+            a {
+              display: block;
+              color: $txt-main;
+              font-size: 1.1rem;
+              font-weight: 600;
+              margin-bottom: 2px;
+              &:hover {
+                color: #ec3d1a;
+              }
+            }
+          }
+        }
+      }
+      .menu-category {
+        display: none;
+        @include tablet {
+          display: block;
+          margin-right: unset;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "../../scss/index.scss";
+
+.slider__main {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  margin-top: 6px;
+
+  &:active {
+    cursor: grabbing;
+  }
+  &:hover .slider__button {
+    visibility: inherit;
+    opacity: 1;
+
+    &__left {
+      transform: translateX(60%);
+    }
+    &__right {
+      transform: translateX(-60%);
+    }
+  }
+
+  &__content {
+    height: 70vh;
+    outline: none;
+
+    @include tablet {
+      height: 40vh;
+    }
+    @include mobile {
+      height: 30vh;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tablet {
+        object-position: center -50px;
+      }
+    }
+  }
+
+  .slider__button {
+    @include flex(center, space-between);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    @include tablet {
+      display: none;
+    }
+
+    &__left,
+    &__right {
+      @include flex(center, center);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+      width: 20px;
+      height: 20px;
+      i {
+        font-size: 2.2rem;
+        color: antiquewhite;
+      }
+
+      &:hover {
+        i {
+          color: #ff2a00;
+        }
+      }
+    }
+
+    &__left {
+      left: 0;
+      transform: translateX(100%);
+    }
+    &__right {
+      right: 0;
+      transform: translateX(-100%);
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 5px !important;
+
+    li {
+      margin: unset !important;
+      button {
+        &::before {
+          color: #ff2a00 !important;
+          font-size: 0.7rem !important;
+        }
+      }
+    }
+  }
+}
+
+.big_slider {
+  @include tablet {
+    display: none;
+  }
+}
+
+.md_slider {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

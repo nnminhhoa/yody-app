@@ -1,0 +1,74 @@
+@import "../../scss/index.scss";
+
+.services {
+  margin: 10px auto;
+
+  .service-list {
+    &__item {
+      @include flex(center, center);
+
+      &-left {
+        margin-right: 10px;
+
+        @include mobile {
+            width: 80px;
+        }
+      }
+
+      &-right {
+        .title-service {
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+          font-weight: 500;
+
+          @include tablet {
+            font-size: 1.2rem;
+          }
+          @include mobile {
+            font-size: 0.9rem;
+          }
+        }
+
+        .md-block {
+          display: block;
+          @include mobile {
+            display: none;
+          }
+        }
+
+        .md-none {
+          display: none;
+
+          @include mobile {
+            display: block;
+            color: $color-main;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+        }
+
+        .sumary-service {
+          font-size: 1rem;
+          font-weight: 600;
+          color: $txt-main;
+          @include tablet {
+            font-size: 1.1rem;
+          }
+
+          @include mobile {
+            font-size: 0.9rem;
+          }
+          span {
+            color: $color-main;
+            font-size: 1.1rem;
+
+            @include mobile {
+              font-size: 0.9rem;
+              color: $txt-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}
