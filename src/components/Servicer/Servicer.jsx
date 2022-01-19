@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "../Grid/Grid";
-import "./Service.scss";
+import "./Servicer.scss";
 import iconImages1 from "../../assets/images-icon/ser_1.png";
 import iconImages2 from "../../assets/images-icon/ser_2.png";
 import iconImages3 from "../../assets/images-icon/ser_3.png";

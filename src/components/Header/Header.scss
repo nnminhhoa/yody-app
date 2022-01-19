@@ -1,6 +1,18 @@
 @import "../../scss/index.scss";
 
+.toggle-header {
+  transform: translateY(-100%);
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  right: 0;
+
   &-top__banner {
     width: 100%;
     height: 80px;
@@ -149,9 +161,13 @@
               width: 0;
               height: 1px;
               background-color: #ee4d2d;
-              bottom: -17px;
+              bottom: -18px;
               left: 0;
               transition: width 0.5s ease;
+
+              @include mobile {
+                bottom: -13px;
+              }
             }
 
             &:hover::after {
@@ -189,10 +205,9 @@
           top: calc(100% + 6px);
           z-index: 99;
           left: 0;
-          background-color: rgba($color: #000000, $alpha: 0.4);
-          width: 100%;
-          height: 100vh;
           display: none;
+          width: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.4);
 
           &__list {
             background-color: #fff;

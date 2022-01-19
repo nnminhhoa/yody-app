@@ -1,10 +1,25 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import DataSlider, { DataSliderMd } from "../../assets/data/dataSlider";
 import "./HeroSlider.scss";
 
 const HeroSlider = () => {
   const ref = useRef();
+  const toggleRef = useRef();
+  const handleScroll = () => {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      toggleRef.current.classList.add("toggle-slider");
+    } else {
+      toggleRef.current.classList.remove("toggle-slider");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const nextSlider = () => {
     ref.current.slickPrev();
@@ -44,7 +59,7 @@ const HeroSlider = () => {
   };
   return (
     <>
-      <div className="slider__main big_slider">
+      <div className="slider__main big_slider" ref={toggleRef}>
         <Slider ref={ref} {...settings}>
           {DataSlider.map((item, index) => (
             <div className="slider__main__content" key={index}>

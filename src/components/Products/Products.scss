@@ -1,0 +1,128 @@
+@import "../../scss/index.scss";
+
+.product {
+  &-card {
+    position: relative;
+    margin: 0 10px;
+
+    @include tablet {
+      margin: 0 5px;
+    }
+
+    &__image {
+      overflow: hidden;
+      img {
+        transform: scale(1);
+        transition: all 0.5s ease;
+      }
+    }
+    &:hover &__image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__title {
+      height: 36px;
+      margin: 13px 0 6px 0;
+
+      @include tablet {
+        margin: 10px 0 5px 0;
+      }
+      h3 {
+        color: rgb(0, 0, 0);
+        font-size: 1.13rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+        text-align: left;
+
+        @include mobile {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          color: $txt-color;
+        }
+      }
+    }
+
+    &__price {
+      @include flex(center, flex-start);
+
+      &-sale {
+        color: $txt-color;
+        font-weight: 600;
+        font-size: 1.3rem;
+
+        @include tablet {
+          font-size: 1.2rem;
+        }
+      }
+
+      &-origin {
+        color: $txt-main;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: line-through;
+        margin-left: 20px;
+        opacity: 0.6;
+
+        @include mobile {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    &__sale {
+      position: absolute;
+      top: 10px;
+
+      @include mobile {
+        top: 5px;
+      }
+
+      svg {
+        @include mobile {
+          width: 38px;
+        }
+      }
+
+      &-number {
+        position: absolute;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        top: 45%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+
+        @include mobile {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &__wishlist {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: #fff;
+      border-radius: 50%;
+      @include flex(center, center);
+      cursor: pointer;
+    }
+
+    .wishlist__image {
+      position: absolute;
+      top: 5px;
+    }
+
+    &__hot {
+      position: absolute;
+      top: 40px;
+      right: 8px;
+    }
+  }
+}

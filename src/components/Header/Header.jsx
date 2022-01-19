@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Header.scss";
 import bannerTop from "../../assets/images/bannertop.jpg";
 import iconFree from "../../assets/images/free_tb.png";
@@ -7,13 +7,25 @@ import navHeader from "../../assets/data/dataNavHeader";
 
 const Header = () => {
   const menuRef = useRef();
+  const headerRef = useRef();
   const { pathname } = useLocation();
   const activeNav = navHeader.findIndex((e) => e.path === pathname);
 
   const handleToggleMenu = () => menuRef.current.classList.toggle("active");
 
+  let prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos < currentScrollPos) {
+      headerRef.current.classList.add("toggle-header");
+    } else {
+      headerRef.current.classList.remove("toggle-header");
+    }
+    prevScrollpos = currentScrollPos;
+  };
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header-top__banner">
         <img src={bannerTop} alt="bannerTop" />
       </div>
