@@ -8,6 +8,7 @@ import logoSocial3 from "../../assets/images-icon/social_3.png";
 import logoSocial5 from "../../assets/images-icon/social_5.png";
 import logoSocial6 from "../../assets/images-icon/social_6.png";
 import logoSocial7 from "../../assets/images-icon/social_7.png";
+import ScrollToTop, { MessContact } from "../ScrollToTop/ScrollToTop";
 
 const footerHelp = [
   {
@@ -271,6 +272,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <MessContact />
+      <ScrollToTop />
     </footer>
   );
 };

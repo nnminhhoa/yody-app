@@ -1,19 +1,34 @@
 @import "../../scss/index.scss";
 
 .product {
-  &-card {
-    position: relative;
+  &_slider {
     margin: 0 10px;
 
     @include tablet {
       margin: 0 5px;
     }
 
+    .product-card {
+      
+      &__image {
+        @include tablet {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &-card {
+    position: relative;
+
     &__image {
       overflow: hidden;
+
       img {
         transform: scale(1);
         transition: all 0.5s ease;
+        object-fit: cover;
       }
     }
     &:hover &__image {

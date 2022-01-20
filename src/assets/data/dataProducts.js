@@ -27,6 +27,7 @@ const products = [
     price: 1289000,
     sale: 60,
     hot: true,
+    gender: "men"
   },
   {
     id: 2,

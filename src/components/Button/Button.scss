@@ -4,18 +4,14 @@
   border: 0;
   outline: 0;
   color: #fff;
-  font-size: 2.2rem;
-  font-weight: 400;
   cursor: pointer;
   overflow: hidden;
   position: relative;
   background-color: $txt-color;
   border: 1px solid $txt-color;
-  letter-spacing: 0.5px;
-  border-radius: 5px;
-  padding: 0.2rem 10rem;
-  font-family: "Dongle", sans-serif;
-  transition: all .3s ease;
+  border-radius: 3px;
+  padding: 0.8rem 10rem;
+  transition: all 0.3s ease;
 
   @include mobile {
     font-size: 2rem;
@@ -28,5 +24,24 @@
     background-color: #fff;
     border: 1px solid $txt-color;
     color: $txt-color;
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "Varela Round", sans-serif;
+  }
+
+  &-sm {
+    padding: 0.7rem 1.6rem;
+    margin: 0 10px;
+    background-color: #fff;
+    color: rgb(51, 42, 27);
+    border: 1px solid #dde1ef;
+
+    &:hover {
+      background-color: $txt-color;
+      color: #fff;
+    }
   }
 }

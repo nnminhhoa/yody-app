@@ -1,0 +1,50 @@
+@import "../../scss/index.scss";
+
+.scroll {
+  &-top {
+    width: 40px;
+    height: 40px;
+    background-color: #ee4d2d;
+    color: #fff;
+    font-size: 1.3rem;
+    border-bottom-left-radius: 5px;
+    @include flex(center, center);
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 400px;
+    visibility: hidden;
+
+    @include tablet {
+      top: 60vh;
+    }
+  }
+}
+.visible {
+  visibility: inherit;
+}
+
+.mess {
+  &-contact {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ee4d2d;
+    border-top-left-radius: 5px;
+    @include flex(center, center);
+    color: #ee4d2d;
+    font-size: 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 355px;
+    cursor: pointer;
+
+    @include tablet {
+      top: 55vh;
+    }
+
+    @include mobile {
+      top: 53vh;
+    }
+  }
+}

@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "./Section.scss";
 import PropTypes from "prop-types";
 import Button from "../Button/Button";
+import Grid from "../Grid/Grid";
+import News from "../News/News";
 
 const Section = (props) => {
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
@@ -26,16 +28,27 @@ export const SectionBanner = (props) => {
 };
 
 export const SectionBody = (props) => {
-  const ref = useRef();
+  const SliderProductsRef = useRef();
+  const SliderNewsRef = useRef();
+
   const nextSlider = () => {
-    ref.current.slickPrev();
+    SliderProductsRef.current.slickPrev();
   };
 
   const prevSlider = () => {
-    ref.current.slickNext();
+    SliderProductsRef.current.slickNext();
   };
-  const settings = {
-    className: "section-outstanding__slider",
+
+  const nextSliderNews = () => {
+    SliderNewsRef.current.slickPrev();
+  };
+
+  const prevSliderNews = () => {
+    SliderNewsRef.current.slickNext();
+  };
+
+  const settingsSliderProducts = {
+    className: "section-slider__products",
     slidesToShow: 5,
     slidesToScroll: 2,
     arrows: false,
@@ -59,26 +72,93 @@ export const SectionBody = (props) => {
       },
     ],
   };
+
+  const settingsDataNews = {
+    className: "section-slider__news",
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    rows: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          rows: 1,
+        },
+      },
+    ],
+  };
   return (
     <div className="container">
-      <div className="section__body">
-        <Slider ref={ref} {...settings}>
-          {props.data.map((item) => (
-            <Products key={item.id} item={item} />
-          ))}
-        </Slider>
-        <div className="section__body-slider_button">
-          <div className="button__left" onClick={nextSlider}>
-            <i className="fas fa-arrow-left"></i>
+      {props.dataProduct ? (
+        <>
+          <div className="section__body">
+            <Slider ref={SliderProductsRef} {...settingsSliderProducts}>
+              {props.dataProduct?.map((item) => (
+                <Products slider key={item.id} item={item} />
+              ))}
+            </Slider>
+            <div className="section__body-slider_button">
+              <div className="button__left" onClick={nextSlider}>
+                <i className="fas fa-arrow-left"></i>
+              </div>
+              <div className="button__right" onClick={prevSlider}>
+                <i className="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <Button>Xem thêm</Button>
           </div>
-          <div className="button__right" onClick={prevSlider}>
-            <i className="fas fa-arrow-right"></i>
+        </>
+      ) : (
+        ""
+      )}
+      {props.dataNew ? (
+        <>
+          <div className="section__body">
+            <Slider ref={SliderNewsRef} {...settingsDataNews}>
+              {props.dataNew?.map((item) => (
+                <News key={item.id} item={item} />
+              ))}
+            </Slider>
+            <div className="section__body-slider_button">
+              <div className="button__left" onClick={nextSliderNews}>
+                <i className="fas fa-arrow-left"></i>
+              </div>
+              <div className="button__right" onClick={prevSliderNews}>
+                <i className="fas fa-arrow-right"></i>
+              </div>
+            </div>
+            <Button>Xem thêm</Button>
           </div>
-        </div>
-      </div>
-      <Button>Xem thêm</Button>
+        </>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
 
+export const SectionProduct = (props) => {
+  return (
+    <div className="container">
+      <div className="section-product">
+        <Grid col={5} mdCol={4} smCol={2} gap={20}>
+          {props.dataProduct?.map((item) => (
+            <Products key={item.id} item={item} />
+          ))}
+        </Grid>
+      </div>
+    </div>
+  );
+};
 export default Section;

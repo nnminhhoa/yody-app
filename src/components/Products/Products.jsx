@@ -7,7 +7,9 @@ const Products = (props) => {
   const sale = props.item.sale;
   const priceSale = props.item.price * ((100 - sale) / 100);
   return (
-    <div className="product-card">
+    <div
+      className={`product-card ${props.slider ? "product_slider" : ""}`}
+    >
       <Link to="/">
         <div className="product-card__image">
           <img src={props.item.image} alt={props.item.title} />
@@ -17,7 +19,7 @@ const Products = (props) => {
         </div>
         <div className="product-card__price">
           <div className="product-card__price-sale">
-            {numberWithCommas(priceSale)}đ
+            {numberWithCommas(Math.round(priceSale/10000)*10000)}đ
           </div>
           <div className="product-card__price-origin">
             {numberWithCommas(props.item.price)}đ

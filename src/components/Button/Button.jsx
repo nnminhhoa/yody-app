@@ -6,7 +6,7 @@ const Button = (props) => {
   const size = props.size ? "btn-" + props.size : "";
 
   return (
-    <button className={`btn ${size}`}>
+    <button className={`btn ${size} ${props.active ? "btn-active" : ""}`}>
       <span className="btn__txt">{props.children}</span>
     </button>
   );

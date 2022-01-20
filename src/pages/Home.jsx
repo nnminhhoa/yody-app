@@ -5,6 +5,7 @@ import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Section, {
   SectionBanner,
   SectionBody,
+  SectionProduct,
   SectionTitle,
 } from "../components/Section/Section";
 import Servicer from "../components/Servicer/Servicer";
@@ -12,22 +13,35 @@ import bannerImage_1 from "../assets/images/banner_hangngay_1.jpg";
 import bannerImage_2 from "../assets/images/banner_hangngay_2.jpg";
 import bannerImage_3 from "../assets/images/banner_hangngay_3.jpg";
 import dataProducts from "../assets/data/dataProducts";
+import Button from "../components/Button/Button";
+import dataNews from "../assets/data/dataNews";
+import dataSliderDesktop from "../assets/data/dataSlider";
+import { dataSliderMd } from "../assets/data/dataSlider";
 
 const Home = () => {
   return (
     <Helmet title="Trang chủ">
-      <HeroSlider />
+      <HeroSlider
+        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("home")}
+        dataSliderMd={dataSliderMd.getSliderMdByPage("home")}
+      />
       <Servicer />
       <Section backgroundColor="beige">
         <SectionTitle>SALE UPTO 60%</SectionTitle>
         <SectionBanner banner={bannerImage_1} />
-        <SectionBody data={dataProducts.getAllProducts()} />
+        <SectionBody dataProduct={dataProducts.getAllProducts()} />
       </Section>
       <Section backgroundColor="main">
         <SectionTitle>#YODYsale</SectionTitle>
         <SectionBanner banner={bannerImage_2} />
         <SectionBanner banner={bannerImage_3} />
-        <SectionBody data={dataProducts.getAllProducts()} />
+        <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
+        <SectionProduct dataProduct={dataProducts.getAllProducts()} />
+        <Button>Xem thêm</Button>
+      </Section>
+      <Section backgroundColor="azure">
+        <SectionTitle>#YODYLOVE</SectionTitle>
+        <SectionBody dataNew={dataNews.getAllNews()} />
       </Section>
       <Footer />
     </Helmet>

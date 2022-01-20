@@ -6,30 +6,39 @@
 .bg-beige {
   background-color: beige;
 }
+
+.bg-azure {
+  background-color: azure;
+}
 .section {
   text-align: center;
   padding-bottom: 25px;
   &__title {
     color: $color-main;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
     display: inline-block;
     margin: 40px auto;
-    opacity: 0.7;
-    
+    font-family: "Varela Round", sans-serif;
+
     @include mobile {
       margin: 20px 0;
+      font-size: 1.2rem;
     }
 
     &::after {
       position: absolute;
       content: "";
-      width: 100%;
+      width: 0;
       height: 1px;
       background-color: $color-main;
       bottom: 1px;
       left: 0;
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
     }
   }
 
@@ -42,12 +51,12 @@
   }
 
   &__body {
-    margin-top: 15px !important;
     margin-bottom: 30px !important;
 
-    @include mobile {
+    @include tablet {
       margin-bottom: 15px !important;
     }
+
     position: relative;
     cursor: grab;
 
@@ -67,13 +76,21 @@
       }
     }
 
-    .slick-list {
-      margin: 0 -10px;
+    .section-slider__products {
+      margin: 0 -10px 25px -10px;
 
       @include tablet {
-        margin: 0 -5px;
+        margin: 0px -5px 15px -5px;
       }
     }
+
+    .section-slider__news {
+      margin: 0 -10px;
+      @include tablet {
+        margin-bottom: 10px;
+      }
+    }
+
     &-slider_button {
       .button__right,
       .button__left {
@@ -107,5 +124,9 @@
         transition: all 0.5s ease;
       }
     }
+  }
+
+  &-product {
+    margin: 10px 0 30px 0;
   }
 }

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const ProductFemale = () => {
-    return (
-        <div>
-            Nữ
-        </div>
-    )
-}
+const ProductFeMale = () => {
+  return <div>Nữ</div>;
+};
 
-export default ProductFemale
+export default ProductFeMale;
