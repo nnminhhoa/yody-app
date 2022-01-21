@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./Header.scss";
 import bannerTop from "../../assets/images/bannertop.jpg";
 import iconFree from "../../assets/images/free_tb.png";

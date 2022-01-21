@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Button from "../Button/Button";
 import Grid from "../Grid/Grid";
 import News from "../News/News";
+import { Link } from "react-router-dom";
 
 const Section = (props) => {
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
@@ -161,4 +162,75 @@ export const SectionProduct = (props) => {
     </div>
   );
 };
+
+export const SectionCategory = (props) => {
+  return (
+    <div className="container">
+      <Grid col={4} mdCol={3} smCol={2} gap={20}>
+        {props.dataCategory?.map((item, index) => (
+          <Link to="/" key={index}>
+            <div className="section-category">
+              <img src={item.image} alt="" />
+              <span>{item.title}</span>
+              {item.hot ? (
+                <span className={`hot ${item.hot === "sale" ? "sale" : ""}`}>
+                  {item.hot}
+                </span>
+              ) : (
+                ""
+              )}
+            </div>
+          </Link>
+        ))}
+      </Grid>
+    </div>
+  );
+};
+
+export const SectionCateStyle = (props) => {
+  console.log(props.dataBannerCate);
+  return (
+    <div className="container">
+      <div className="section-catestyle">
+        <Grid col={2} mdCol={1} smCol={1} gap={10}>
+          {props.dataBannerCate?.map((item, index) => (
+            <figure className="section-catestyle__left" key={index}>
+              {item.banner1?.map((item, index) => (
+                <div className="section-catestyle__left-item" key={index}>
+                  <img key={index} src={item.image} alt={item.title} />
+                  <figcaption>
+                    <div className="text-figcaption">
+                      <h2>{item.title}</h2>
+                      <p>{item.description}</p>
+                    </div>
+                    <Link to="#"></Link>
+                  </figcaption>
+                </div>
+              ))}
+            </figure>
+          ))}
+          <div className="section-catestyle__right">
+            {props.dataBannerCate?.map((item, index) => (
+              <Grid key={index} col={2} mdCol={2} smCol={1} gap={10}>
+                {item.banner2?.map((item, index) => (
+                  <figure key={index} className="section-catestyle__right-item">
+                    <img src={item.image} alt={item.title} />
+                    <figcaption>
+                      <div className="text-figcaption">
+                        <h2>{item.title}</h2>
+                        <p>{item.description}</p>
+                        <Link to="#"></Link>
+                      </div>
+                    </figcaption>
+                  </figure>
+                ))}
+              </Grid>
+            ))}
+          </div>
+        </Grid>
+      </div>
+    </div>
+  );
+};
+
 export default Section;

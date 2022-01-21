@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import "./New.scss";
+import "./News.scss";
 
 const News = (props) => {
   return (

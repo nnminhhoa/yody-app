@@ -6,7 +6,7 @@ import iconImages2 from "../../assets/images-icon/ser_2.png";
 import iconImages3 from "../../assets/images-icon/ser_3.png";
 import iconImages4 from "../../assets/images-icon/ser_4.png";
 
-const Service = () => {
+const Servicer = () => {
   return (
     <div className="services">
       <div className="container">
@@ -69,4 +69,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Servicer;

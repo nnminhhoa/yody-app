@@ -4,12 +4,16 @@ import image_slider_03 from "../images/slider_4.jpg";
 import image_slider_04 from "../images/slider_5.jpg";
 import image_slider_05 from "../images/page_nam_slider_1.jpg";
 import image_slider_06 from "../images/banner_hangngay_3.jpg";
+import image_slider_07 from "../images/banner_hangngay_2.jpg";
+import image_slider_08 from "../images/page_treem_slider_1.jpg";
 
 import image_sliderMd_01 from "../images/slider_2_mb.jpg";
 import image_sliderMd_02 from "../images/slider_3_mb.jpg";
 import image_sliderMd_03 from "../images/slider_4_mb.jpg";
 import image_sliderMd_04 from "../images/slider_5_mb.jpg";
 import image_sliderMd_05 from "../images/page_nam_slider_1_mb.jpg";
+import image_sliderMd_06 from "../images/page_nu_slider_1_mb.jpg";
+import image_sliderMd_07 from "../images/page_treem_slider_1_mb.jpg";
 
 const SliderDesktop = [
   {
@@ -30,11 +34,19 @@ const SliderDesktop = [
   },
   {
     image: image_slider_05,
-    page: "nam",
+    page: "man",
   },
   {
     image: image_slider_06,
-    page: "nam",
+    page: "man",
+  },
+  {
+    image: image_slider_07,
+    page: "woman",
+  },
+  {
+    image: image_slider_08,
+    page: "children",
   },
 ];
 
@@ -57,7 +69,15 @@ const SliderMd = [
   },
   {
     image: image_sliderMd_05,
-    page: "nam",
+    page: "man",
+  },
+  {
+    image: image_sliderMd_06,
+    page: "woman",
+  },
+  {
+    image: image_sliderMd_07,
+    page: "children",
   },
 ];
 

@@ -12,6 +12,22 @@ import images_new_10 from "../images-news/image-new_10.jpg";
 const news = [
   {
     id: 1,
+    title: "Vải pique mắt chim - chất liệu được ưa chuộng hiện nay",
+    image: images_new_07,
+    date: "25/11/2021",
+    description:
+      "Vải pique mắt chim là gì? Là loại vải được dùng ngày càng phổ biến trong lĩnh vực may mặc - vải pique mắt chim có điều gì đặc biệt? Cùng Yody khám phá ngay nhé!",
+  },
+  {
+    id: 2,
+    title: "Top 5 mẫu áo sweater form rộng đang được ưa chuộng nhất 2022",
+    image: images_new_04,
+    date: "11/01/2022",
+    description:
+      "Dễ mặc, dễ phối, thoải mái, ấm áp và phong cách là lý do khiến áo sweater luôn là một trong những item được lựa chọn hàng đầu của cả nam và nữ giới mỗi khi đông về. Mẫu áo sweater form rộng đang được ưa chuộng nhất hiện nay và thể hiện được phong cách thời trang cá nhân rõ nét.",
+  },
+  {
+    id: 3,
     title: "Mua nhanh kẻo hết: YODY sale lớn đón Tết - Up to 60%",
     image: images_new_01,
     date: "29/12/2021",
@@ -19,29 +35,12 @@ const news = [
       "Bạn đã sẵn sàng mua sắm quần áo mới để “tân trang” đón Tết chưa? Ngay bây giờ đừng bỏ lỡ cơ hội sở hữu những món đồ thời trang tuyệt đẹp giá tiết kiệm từ YODY với chương trình siêu ưu đãi “Sale lớn đón Tết - up to 60%” nhé.",
   },
   {
-    id: 2,
+    id: 4,
     title: "Bùng nổ ưu đãi - YODY sale up to 50% hàng ngàn sản phẩm",
     image: images_new_02,
     date: "16/12/2021",
     description:
       "Từ 17 - 31/12/2021 YODY ưu đãi “khủng” tri ân khách hàng đã đồng hành với chương trình giảm giá lên tới 50% hàng ngàn sản phẩm, cùng cơ hội bốc thăm nhận quà miễn phí vô cùng giá trị.",
-  },
-  {
-    id: 3,
-    title:
-      "Áo giữ nhiệt là gì? 7 cách phối đồ với áo giữ nhiệt nữ xinh đẹp và ấm áp",
-    image: images_new_03,
-    date: "12/01/2022",
-    description:
-      "Áo giữ nhiệt là món đồ được các nàng ưa chuộng sử dụng trong mùa đông giá lạnh khi vừa không cần mặc quá nhiều quần áo cồng kềnh mà vẫn giữ ấm hiệu quả. Vậy phối đồ với áo giữ nhiệt nữ ra sao để nàng luôn ấm áp lại thể hiện được phong cách thời trang hết nấc của mình? YODY sẽ giúp bạn trả lời.",
-  },
-  {
-    id: 4,
-    title: "Top 5 mẫu áo sweater form rộng đang được ưa chuộng nhất 2022",
-    image: images_new_04,
-    date: "11/01/2022",
-    description:
-      "Dễ mặc, dễ phối, thoải mái, ấm áp và phong cách là lý do khiến áo sweater luôn là một trong những item được lựa chọn hàng đầu của cả nam và nữ giới mỗi khi đông về. Mẫu áo sweater form rộng đang được ưa chuộng nhất hiện nay và thể hiện được phong cách thời trang cá nhân rõ nét.",
   },
   {
     id: 5,
@@ -61,11 +60,12 @@ const news = [
   },
   {
     id: 7,
-    title: "Vải pique mắt chim - chất liệu được ưa chuộng hiện nay",
-    image: images_new_07,
-    date: "25/11/2021",
+    title:
+      "Áo giữ nhiệt là gì? 7 cách phối đồ với áo giữ nhiệt nữ xinh đẹp và ấm áp",
+    image: images_new_03,
+    date: "12/01/2022",
     description:
-      "Vải pique mắt chim là gì? Là loại vải được dùng ngày càng phổ biến trong lĩnh vực may mặc - vải pique mắt chim có điều gì đặc biệt? Cùng Yody khám phá ngay nhé!",
+      "Áo giữ nhiệt là món đồ được các nàng ưa chuộng sử dụng trong mùa đông giá lạnh khi vừa không cần mặc quá nhiều quần áo cồng kềnh mà vẫn giữ ấm hiệu quả. Vậy phối đồ với áo giữ nhiệt nữ ra sao để nàng luôn ấm áp lại thể hiện được phong cách thời trang hết nấc của mình? YODY sẽ giúp bạn trả lời.",
   },
   {
     id: 8,

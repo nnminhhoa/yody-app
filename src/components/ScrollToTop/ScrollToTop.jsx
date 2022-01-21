@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import "./ScrollToTop.scss";
 
 const ScrollToTop = () => {
@@ -42,6 +43,16 @@ export const MessContact = () => {
       <i className="far fa-comments"></i>
     </div>
   );
+};
+
+export const ScrollOnTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 };
 
 export default ScrollToTop;

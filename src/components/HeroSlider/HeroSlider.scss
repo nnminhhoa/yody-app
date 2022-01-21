@@ -42,10 +42,10 @@
       height: 100%;
       object-fit: cover;
       @include tablet {
-        object-position: center -50px;
+        object-position: center -20px;
       }
       @include mobile {
-        object-position: center -25px;
+        object-position: center -10px;
       }
     }
   }
