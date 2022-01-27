@@ -1,32 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import numberWithCommas from "../../utils/numberWithCommas";
+import removeAccents from "../../utils/removeAccents";
 import "./Products.scss";
 
 const Products = (props) => {
-  const sale = props.item.sale;
-  const priceSale = props.item.price * ((100 - sale) / 100);
+  const products = props.item;
   return (
     <div
+      key={products.id}
       className={`product-card ${props.slider ? "product_slider" : ""}`}
     >
-      <Link to="/">
+      <Link to={`/${removeAccents(products.title)}`}>
         <div className="product-card__image">
-          <img src={props.item.image} alt={props.item.title} />
+          <img src={products.image} alt={products.title} />
         </div>
         <div className="product-card__title">
-          <h3>{props.item.title}</h3>
+          <h3>{products.title}</h3>
         </div>
         <div className="product-card__price">
           <div className="product-card__price-sale">
-            {numberWithCommas(Math.round(priceSale/10000)*10000)}đ
+            {numberWithCommas(Math.round(products.price / 10000) * 10000)}đ
           </div>
-          <div className="product-card__price-origin">
-            {numberWithCommas(props.item.price)}đ
-          </div>
+          {products.sale !== 0 ? (
+            <div className="product-card__price-origin">
+              {numberWithCommas(products.price)}đ
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </Link>
-      {props.item.sale ? (
+      {products.sale !== 0 ? (
         <div className="product-card__sale">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +45,7 @@ const Products = (props) => {
               fill="#EE4D2D"
             />
           </svg>
-          <div className="product-card__sale-number">-{props.item.sale}%</div>
+          <div className="product-card__sale-number">-{products.sale}%</div>
         </div>
       ) : (
         ""
@@ -62,7 +67,7 @@ const Products = (props) => {
           </svg>
         </div>
       </div>
-      {props.item.hot ? (
+      {products.hot ? (
         <div className="product-card__hot">
           <span className="hot-tag">
             <svg

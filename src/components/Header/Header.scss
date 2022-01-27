@@ -8,10 +8,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 99;
   background-color: #fff;
   transition: all 0.5s ease;
-  right: 0;
 
   &-top__banner {
     width: 100%;
@@ -190,8 +190,9 @@
         }
 
         & > li:hover .mega-menu {
-          display: block;
-          cursor: default;
+          visibility: inherit;
+          opacity: 1;
+
           @include tablet {
             display: none;
           }
@@ -206,9 +207,9 @@
           top: calc(100% + 6px);
           z-index: 99;
           left: 0;
-          display: none;
-          width: 100%;
-          background-color: rgba($color: #000000, $alpha: 0.4);
+          opacity: 0;
+          visibility: hidden;
+          cursor: pointer;
 
           &__list {
             background-color: #fff;
@@ -244,7 +245,20 @@
                 color: $txt-main;
                 font-size: 1.2rem;
                 font-weight: 500;
+                position: relative;
                 &:hover {
+                  color: $color-main;
+                }
+                span {
+                  color: #ff4722;
+                  font-size: 1rem;
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  position: absolute;
+                  top: -5px;
+                  left: calc(100% + 4px);
+                }
+                span.sale {
                   color: $color-main;
                 }
               }
@@ -314,11 +328,11 @@
         }
 
         &:hover {
-          border-color: #f57056;
+          border-color: $color-main;
         }
 
         &:focus-within {
-          border-color: #f57056;
+          border-color: $color-main;
         }
 
         .btn-md__search {
@@ -349,7 +363,7 @@
         }
         .btn-big__search {
           flex-grow: 1;
-          background-color: #ee4d2d;
+          background-color: $color-main;
           border: none;
           outline: none;
           height: 100%;
@@ -360,7 +374,7 @@
           }
 
           &:hover {
-            background-color: #ec3d1a;
+            background-color: $color-main;
           }
         }
       }
@@ -411,11 +425,10 @@
               padding: 7px 5px;
               display: block;
               color: $txt-main;
-              font-weight: 500;
-              font-size: 1.1rem;
-              text-transform: uppercase;
+              font-weight: 600;
+              font-size: 1.2rem;
               &:hover {
-                color: #ec3d1a;
+                color: $color-main;
               }
             }
           }
@@ -479,7 +492,7 @@
               font-weight: 600;
               margin-bottom: 2px;
               &:hover {
-                color: #ec3d1a;
+                color: $color-main;
               }
             }
           }

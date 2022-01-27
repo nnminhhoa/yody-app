@@ -17,7 +17,7 @@ const navHeader = [
   },
   {
     display: "Nam",
-    path: "/product-male",
+    path: "/male",
     megaMenu: [
       {
         bannerNav: bannerNav_01,
@@ -30,6 +30,7 @@ const navHeader = [
           {
             name: "Áo polo nam",
             path: "/",
+            hot: "hot",
           },
           {
             name: "Áo sơ mi nam",
@@ -38,6 +39,7 @@ const navHeader = [
           {
             name: "Áo khoác nam",
             path: "/",
+            hot: "hot",
           },
           {
             name: "Áo vest nam",
@@ -60,6 +62,7 @@ const navHeader = [
           {
             name: "Quần kaki nam",
             path: "/",
+            hot: "sale",
           },
         ],
       },
@@ -80,6 +83,7 @@ const navHeader = [
           {
             name: "Ví nam",
             path: "/",
+            hot: "sale",
           },
           {
             name: "Mũ nam",
@@ -99,7 +103,7 @@ const navHeader = [
   },
   {
     display: "Nữ",
-    path: "/product-female",
+    path: "/female",
     megaMenu: [
       {
         bannerNav: bannerNav_05,
@@ -112,6 +116,7 @@ const navHeader = [
           {
             name: "Áo polo nữ",
             path: "/",
+            hot: "hot",
           },
           {
             name: "Áo sơ mi nam",
@@ -124,6 +129,7 @@ const navHeader = [
           {
             name: "Áo khoác nữ",
             path: "/",
+            hot: "hot",
           },
         ],
       },
@@ -134,6 +140,7 @@ const navHeader = [
           {
             name: "Quần jeans nữ",
             path: "/",
+            hot: "new",
           },
           {
             name: "Quần tâu nữ",
@@ -181,7 +188,7 @@ const navHeader = [
   },
   {
     display: "Trẻ em",
-    path: "/product-children",
+    path: "/children",
     megaMenu: [
       {
         bannerNav: bannerNav_03,
@@ -194,6 +201,7 @@ const navHeader = [
           {
             name: "Áo polo",
             path: "/",
+            hot: "hot",
           },
           {
             name: "Áo sơ mi",
@@ -202,6 +210,8 @@ const navHeader = [
           {
             name: "Áo khoác",
             path: "/",
+            hot: "new",
+
           },
         ],
       },

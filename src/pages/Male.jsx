@@ -1,12 +1,7 @@
 import React from "react";
-import dataCategorySection, {
-  dataBannerCate,
-} from "../assets/data/dataCategorySection";
-import dataNews from "../assets/data/dataNews";
-import dataProducts from "../assets/data/dataProducts";
 import dataSliderDesktop, { dataSliderMd } from "../assets/data/dataSlider";
-import Footer from "../components/Footer/Footer";
 import Helmet from "../components/Helmet/Helmet";
+import Servicer from "../components/Servicer/Servicer";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Section, {
   SectionBody,
@@ -15,31 +10,38 @@ import Section, {
   SectionProduct,
   SectionTitle,
 } from "../components/Section/Section";
-import Servicer from "../components/Servicer/Servicer";
+import Footer from "../components/Footer/Footer";
+import dataCategorySection, {
+  dataBannerCate,
+} from "../assets/data/dataCategorySection";
+import dataNews from "../assets/data/dataNews";
+import dataProducts from "../assets/data/dataProducts";
 
-const ProductFeMale = () => {
+const Male = () => {
   return (
-    <Helmet title="Thời trang nữ">
+    <Helmet title="Thời trang nam">
       <HeroSlider
-        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("woman")}
-        dataSliderMd={dataSliderMd.getSliderMdByPage("woman")}
+        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("man")}
+        dataSliderMd={dataSliderMd.getSliderMdByPage("man")}
       />
       <Servicer />
       <Section>
         <SectionTitle>MUA THEO THỂ LOẠI</SectionTitle>
         <SectionCategory
-          dataCategory={dataCategorySection.getImageCateByPage("woman")}
+          dataCategory={dataCategorySection.getImageCateByPage("man")}
         />
       </Section>
       <Section>
         <SectionTitle>MUA THEO PHONG CÁCH</SectionTitle>
         <SectionCateStyle
-          dataBannerCate={dataBannerCate.getBannerCateByPage("woman")}
+          dataBannerCate={dataBannerCate.getBannerCateByPage("man")}
         />
       </Section>
       <Section backgroundColor="beige">
         <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
-        <SectionProduct dataProduct={dataProducts.getAllProducts()} />
+        <SectionProduct
+          dataProduct={dataProducts.getProductByInfo("man").slice(0, 15)}
+        />
       </Section>
       <Section backgroundColor="azure">
         <SectionTitle>#YODYLOVE</SectionTitle>
@@ -50,4 +52,4 @@ const ProductFeMale = () => {
   );
 };
 
-export default ProductFeMale;
+export default Male;

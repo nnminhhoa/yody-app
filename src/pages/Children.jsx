@@ -17,7 +17,7 @@ import Section, {
 } from "../components/Section/Section";
 import Servicer from "../components/Servicer/Servicer";
 
-const ProductChildren = () => {
+const Children = () => {
   return (
     <Helmet title="Thời trang trẻ em">
       <HeroSlider
@@ -39,7 +39,9 @@ const ProductChildren = () => {
       </Section>
       <Section backgroundColor="beige">
         <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
-        <SectionProduct dataProduct={dataProducts.getAllProducts()} />
+        <SectionProduct
+          dataProduct={dataProducts.getProductByInfo("children")}
+        />
       </Section>
       <Section backgroundColor="azure">
         <SectionTitle>#YODYLOVE</SectionTitle>
@@ -50,4 +52,4 @@ const ProductChildren = () => {
   );
 };
 
-export default ProductChildren;
+export default Children;

@@ -250,26 +250,25 @@ const imageBannerCate = [
     banner2: [
       {
         title: "Phong cách công sở",
-        image: imageCateStyle_12,
+        image: imageCateStyle_08,
         description:
           "Thời trang công sở là những trang phục được mặc trong môi trường công sở, nơi làm việc hoặc gặp đối tác, họp hành,...",
       },
       {
         title: "Thười trang basic",
-        image: imageCateStyle_13,
+        image: imageCateStyle_09,
         description:
           "Thời trang basic là phong cách basic luôn hướng tới sự đơn giản, không màu mè, màu sắc quen thuộc không quá lòe loẹt như đen, trắng hay xám.",
       },
-
       {
         title: "Thời trang ở nhà",
-        image: imageCateStyle_14,
+        image: imageCateStyle_06,
         description:
           "là một trang phục rất kinh tế nếu tính theo số lần mặc. Bạn có thể mặc một bộ pajama hay váy choàng chất lượng tốt trong nhiều năm.",
       },
       {
         title: "Mix & Match",
-        image: imageCateStyle_15,
+        image: imageCateStyle_07,
         description:
           "Thời trang basic là phong cách basic luôn hướng tới sự đơn giản, không màu mè, màu sắc quen thuộc không quá lòe loẹt như đen, trắng hay xám.",
       },

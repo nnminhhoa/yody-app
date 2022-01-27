@@ -7,6 +7,7 @@ import Button from "../Button/Button";
 import Grid from "../Grid/Grid";
 import News from "../News/News";
 import { Link } from "react-router-dom";
+import removeAccents from "../../utils/removeAccents";
 
 const Section = (props) => {
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
@@ -154,11 +155,12 @@ export const SectionProduct = (props) => {
     <div className="container">
       <div className="section-product">
         <Grid col={5} mdCol={4} smCol={2} gap={20}>
-          {props.dataProduct?.map((item) => (
-            <Products key={item.id} item={item} />
+          {props.dataProduct?.map((item, index) => (
+            <Products key={index} item={item} />
           ))}
         </Grid>
       </div>
+      <Button>Xem thêm</Button>
     </div>
   );
 };
@@ -188,7 +190,6 @@ export const SectionCategory = (props) => {
 };
 
 export const SectionCateStyle = (props) => {
-  console.log(props.dataBannerCate);
   return (
     <div className="container">
       <div className="section-catestyle">

@@ -20,7 +20,7 @@ const Header = () => {
     if (prevScrollpos < currentScrollPos) {
       headerRef.current.classList.add("toggle-header");
     } else {
-      headerRef.current.classList.remove("toggle-header");
+      headerRef?.current.classList.remove("toggle-header");
     }
     prevScrollpos = currentScrollPos;
   };
@@ -127,7 +127,20 @@ const Header = () => {
                               <ul>
                                 {item.productParent?.map((item, index) => (
                                   <li key={index}>
-                                    <Link to={item.path}>{item.name}</Link>
+                                    <Link to={item.path}>
+                                      {item.name}
+                                      {item.hot ? (
+                                        <span
+                                          className={`${
+                                            item.hot === "sale" ? "sale" : ""
+                                          }`}
+                                        >
+                                          {item.hot}
+                                        </span>
+                                      ) : (
+                                        ""
+                                      )}
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
