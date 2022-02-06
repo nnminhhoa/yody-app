@@ -2,12 +2,21 @@ $txt-main: #131313;
 $color-main: #fcb220;
 $txt-color: #fcb220;
 
-$header-height: 152px;
+$header-height: 155px;
 $header-tablet-height: 48px;
 $header-mobile-height: 70px;
 $header-shrink-height: 100px;
 
 $mobile-width: 600px;
 $tablet-width: 1024px;
+
+$colors: (
+  "blue": #003eb9,
+  "be": #fad2ff,
+  "pink": #fe7e73,
+  "yellow": rgb(255, 241, 41),
+  "white": #ffffff,
+  "black": #000000,
+);
 
 $numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8);

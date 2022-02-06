@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Products from "../Products/Products";
 import Slider from "react-slick";
 import "./Section.scss";
@@ -6,8 +6,7 @@ import PropTypes from "prop-types";
 import Button from "../Button/Button";
 import Grid from "../Grid/Grid";
 import News from "../News/News";
-import { Link } from "react-router-dom";
-import removeAccents from "../../utils/removeAccents";
+import { Link, useLocation } from "react-router-dom";
 
 const Section = (props) => {
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
@@ -106,8 +105,8 @@ export const SectionBody = (props) => {
         <>
           <div className="section__body">
             <Slider ref={SliderProductsRef} {...settingsSliderProducts}>
-              {props.dataProduct?.map((item) => (
-                <Products slider key={item.id} item={item} />
+              {props.dataProduct?.map((item, index) => (
+                <Products slider key={index} item={item} />
               ))}
             </Slider>
             <div className="section__body-slider_button">
@@ -151,6 +150,8 @@ export const SectionBody = (props) => {
 };
 
 export const SectionProduct = (props) => {
+  const { pathname } = useLocation();
+
   return (
     <div className="container">
       <div className="section-product">
@@ -160,7 +161,9 @@ export const SectionProduct = (props) => {
           ))}
         </Grid>
       </div>
-      <Button>Xem thêm</Button>
+      <Link to={`/product-${pathname.replace("/", "")}`}>
+        <Button>Xem thêm</Button>
+      </Link>
     </div>
   );
 };
@@ -190,43 +193,40 @@ export const SectionCategory = (props) => {
 };
 
 export const SectionCateStyle = (props) => {
+  const dataBannerCate = props.dataBannerCate;
   return (
     <div className="container">
       <div className="section-catestyle">
         <Grid col={2} mdCol={1} smCol={1} gap={10}>
-          {props.dataBannerCate?.map((item, index) => (
-            <figure className="section-catestyle__left" key={index}>
-              {item.banner1?.map((item, index) => (
-                <div className="section-catestyle__left-item" key={index}>
-                  <img key={index} src={item.image} alt={item.title} />
+          <figure className="section-catestyle__left">
+            {dataBannerCate.banner1?.map((item, index) => (
+              <div className="section-catestyle__left-item" key={index}>
+                <img key={index} src={item.image} alt={item.title} />
+                <figcaption>
+                  <div className="text-figcaption">
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                  </div>
+                  <Link to="#"></Link>
+                </figcaption>
+              </div>
+            ))}
+          </figure>
+          <div className="section-catestyle__right">
+            <Grid col={2} mdCol={2} smCol={1} gap={10}>
+              {dataBannerCate.banner2?.map((item, index) => (
+                <figure key={index} className="section-catestyle__right-item">
+                  <img src={item.image} alt={item.title} />
                   <figcaption>
                     <div className="text-figcaption">
                       <h2>{item.title}</h2>
                       <p>{item.description}</p>
+                      <Link to="#"></Link>
                     </div>
-                    <Link to="#"></Link>
                   </figcaption>
-                </div>
+                </figure>
               ))}
-            </figure>
-          ))}
-          <div className="section-catestyle__right">
-            {props.dataBannerCate?.map((item, index) => (
-              <Grid key={index} col={2} mdCol={2} smCol={1} gap={10}>
-                {item.banner2?.map((item, index) => (
-                  <figure key={index} className="section-catestyle__right-item">
-                    <img src={item.image} alt={item.title} />
-                    <figcaption>
-                      <div className="text-figcaption">
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                        <Link to="#"></Link>
-                      </div>
-                    </figcaption>
-                  </figure>
-                ))}
-              </Grid>
-            ))}
+            </Grid>
           </div>
         </Grid>
       </div>

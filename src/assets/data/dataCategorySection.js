@@ -35,130 +35,119 @@ import imageCateStyle_08 from "../images-category/page_nu_banner_3.jpg";
 import imageCateStyle_09 from "../images-category/page_nu_banner_4.jpg";
 import imageCateStyle_10 from "../images-category/page_nu_banner_5.jpg";
 import imageCateStyle_11 from "../images-category/page_treem_banner_1.jpg";
-import imageCateStyle_12 from "../images-category/page_treem_banner_2.jpg";
-import imageCateStyle_13 from "../images-category/page_treem_banner_3.jpg";
-import imageCateStyle_14 from "../images-category/page_treem_banner_3.jpg";
-import imageCateStyle_15 from "../images-category/page_treem_banner_3.jpg";
 
 const imageCategory = [
   {
-    title: "Áo polo",
-    image: imageCateMan_01,
-    page: "man",
-    hot: "hot",
+    path: "/male",
+    item: [
+      {
+        title: "Áo polo",
+        image: imageCateMan_01,
+        hot: "hot",
+      },
+      {
+        title: "Quần jeans",
+        image: imageCateMan_02,
+      },
+      {
+        title: "Áo sơ mi",
+        image: imageCateMan_03,
+        hot: "sale",
+      },
+      {
+        title: "Quần âu",
+        image: imageCateMan_04,
+      },
+      {
+        title: "Áo khoác",
+        image: imageCateMan_05,
+        hot: "hot",
+      },
+      {
+        title: "Đồ lót",
+        image: imageCateMan_06,
+        hot: "new",
+      },
+      {
+        title: "Quần kaki",
+        image: imageCateMan_07,
+      },
+      {
+        title: "Phụ kiện",
+        image: imageCateMan_08,
+      },
+    ],
   },
   {
-    title: "Quần jeans",
-    image: imageCateMan_02,
-    page: "man",
+    path: "/female",
+    item: [
+      {
+        title: "Áo polo",
+        image: imageCateWoman_01,
+      },
+      {
+        title: "Áo sơ mi",
+        image: imageCateWoman_02,
+      },
+      {
+        title: "Vấy đầm",
+        image: imageCateWoman_03,
+      },
+      {
+        title: "Áo khoác",
+        image: imageCateWoman_04,
+      },
+      {
+        title: "Áo thun",
+        image: imageCateWoman_05,
+      },
+      {
+        title: "Quần âu",
+        image: imageCateWoman_06,
+      },
+      {
+        title: "Chân váy",
+        image: imageCateWoman_07,
+        page: "woman",
+      },
+      {
+        title: "Quần kaki",
+        image: imageCateWoman_08,
+      },
+      {
+        title: "Phụ kiện",
+        image: imageCateWoman_09,
+      },
+      {
+        title: "Quần jeans",
+        image: imageCateWoman_10,
+      },
+    ],
   },
   {
-    title: "Áo sơ mi",
-    image: imageCateMan_03,
-    page: "man",
-    hot: "sale",
-  },
-  {
-    title: "Quần âu",
-    image: imageCateMan_04,
-    page: "man",
-  },
-  {
-    title: "Áo khoác",
-    image: imageCateMan_05,
-    page: "man",
-    hot: "hot",
-  },
-  {
-    title: "Đồ lót",
-    image: imageCateMan_06,
-    page: "man",
-    hot: "new",
-  },
-  {
-    title: "Quần kaki",
-    image: imageCateMan_07,
-    page: "man",
-  },
-  {
-    title: "Phụ kiện",
-    image: imageCateMan_08,
-    page: "man",
-  },
-  {
-    title: "Áo polo",
-    image: imageCateWoman_01,
-    page: "woman",
-  },
-  {
-    title: "Áo sơ mi",
-    image: imageCateWoman_02,
-    page: "woman",
-  },
-  {
-    title: "Vấy đầm",
-    image: imageCateWoman_03,
-    page: "woman",
-  },
-  {
-    title: "Áo khoác",
-    image: imageCateWoman_04,
-    page: "woman",
-  },
-  {
-    title: "Áo thun",
-    image: imageCateWoman_05,
-    page: "woman",
-  },
-  {
-    title: "Quần âu",
-    image: imageCateWoman_06,
-    page: "woman",
-  },
-  {
-    title: "Chân váy",
-    image: imageCateWoman_07,
-    page: "woman",
-  },
-  {
-    title: "Quần kaki",
-    image: imageCateWoman_08,
-    page: "woman",
-  },
-  {
-    title: "Phụ kiện",
-    image: imageCateWoman_09,
-    page: "woman",
-  },
-  {
-    title: "Quần jeans",
-    image: imageCateWoman_10,
-    page: "woman",
-  },
-  {
-    title: "Áo khoác",
-    image: imageCateChildren_01,
-    page: "children",
-  },
-  {
-    title: "Áo polo",
-    image: imageCateChildren_02,
-    page: "children",
-  },
-  {
-    title: "Áo sơ mi",
-    image: imageCateChildren_03,
-    page: "children",
-  },
-  {
-    title: "Quần dài",
-    image: imageCateChildren_04,
-    page: "children",
-  },
-  {
-    title: "Chân váy",
-    image: imageCateChildren_05,
-    page: "children",
+    path: "/children",
+    item: [
+      {
+        title: "Áo khoác",
+        image: imageCateChildren_01,
+      },
+      {
+        title: "Áo polo",
+        image: imageCateChildren_02,
+      },
+      {
+        title: "Áo sơ mi",
+        image: imageCateChildren_03,
+      },
+      {
+        title: "Quần dài",
+        image: imageCateChildren_04,
+      },
+      {
+        title: "Chân váy",
+        image: imageCateChildren_05,
+      },
+    ],
   },
 ];
 
@@ -198,7 +187,7 @@ const imageBannerCate = [
           "là một trang phục rất kinh tế nếu tính theo số lần mặc. Bạn có thể mặc một bộ pajama hay váy choàng chất lượng tốt trong nhiều năm.",
       },
     ],
-    page: "man",
+    path: "/male",
   },
   {
     banner1: [
@@ -236,7 +225,7 @@ const imageBannerCate = [
           "Thời trang basic là phong cách basic luôn hướng tới sự đơn giản, không màu mè, màu sắc quen thuộc không quá lòe loẹt như đen, trắng hay xám.",
       },
     ],
-    page: "woman",
+    path: "/female",
   },
   {
     banner1: [
@@ -273,22 +262,38 @@ const imageBannerCate = [
           "Thời trang basic là phong cách basic luôn hướng tới sự đơn giản, không màu mè, màu sắc quen thuộc không quá lòe loẹt như đen, trắng hay xám.",
       },
     ],
-    page: "children",
+    path: "/children",
   },
 ];
 
-const getImageCateByPage = (page) =>
-  imageCategory.filter((e) => e.page === page);
-
-const dataCategorySection = {
-  getImageCateByPage,
+const getImageCateByPath = (path) => {
+  const images = [];
+  imageCategory.filter((e) => {
+    if (e.path === path) {
+      images.push(e);
+    }
+    return images[0];
+  });
+  return images[0].item;
 };
 
-const getBannerCateByPage = (page) =>
-  imageBannerCate.filter((e) => e.page === page);
-
-export const dataBannerCate = {
-  getBannerCateByPage,
+const dataCategorySection = {
+  getImageCateByPath,
 };
 
 export default dataCategorySection;
+
+const getBannerCateByPath = (path) => {
+  const images = [];
+  imageBannerCate.filter((e) => {
+    if (e.path === path) {
+      images.push(e);
+    }
+    return images;
+  });
+  return images[0];
+};
+
+export const dataBannerCate = {
+  getBannerCateByPath,
+};

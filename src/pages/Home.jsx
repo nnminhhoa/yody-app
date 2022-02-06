@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer/Footer";
 import Helmet from "../components/Helmet/Helmet";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Section, {
@@ -16,33 +15,33 @@ import dataProducts from "../assets/data/dataProducts";
 import dataNews from "../assets/data/dataNews";
 import dataSliderDesktop from "../assets/data/dataSlider";
 import { dataSliderMd } from "../assets/data/dataSlider";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  const { pathname } = useLocation();
   return (
     <Helmet title="Trang chủ">
       <HeroSlider
-        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("home")}
-        dataSliderMd={dataSliderMd.getSliderMdByPage("home")}
+        dataSliderDk={dataSliderDesktop.getSliderDesktopByPath(pathname)}
+        dataSliderMd={dataSliderMd.getSliderMdByPath(pathname)}
       />
       <Servicer />
       <Section backgroundColor="beige">
         <SectionTitle>SALE UPTO 60%</SectionTitle>
         <SectionBanner banner={bannerImage_1} />
-        <SectionBody dataProduct={dataProducts.getAllProductSale()} />
+        <SectionBody dataProduct={dataProducts.getProductSale(20)} />
       </Section>
       <Section backgroundColor="main">
         <SectionTitle>#YODYsale</SectionTitle>
         <SectionBanner banner={bannerImage_2} />
         <SectionBanner banner={bannerImage_3} />
         <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
-        <SectionProduct dataProduct={dataProducts.getAllProductSale()} />
-        
+        <SectionProduct dataProduct={dataProducts.getProductSale(20)} />
       </Section>
       <Section backgroundColor="azure">
         <SectionTitle>#YODYLOVE</SectionTitle>
         <SectionBody dataNew={dataNews.getAllNews()} />
       </Section>
-      <Footer />
     </Helmet>
   );
 };

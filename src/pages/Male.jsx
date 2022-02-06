@@ -10,44 +10,46 @@ import Section, {
   SectionProduct,
   SectionTitle,
 } from "../components/Section/Section";
-import Footer from "../components/Footer/Footer";
 import dataCategorySection, {
   dataBannerCate,
 } from "../assets/data/dataCategorySection";
 import dataNews from "../assets/data/dataNews";
 import dataProducts from "../assets/data/dataProducts";
+import { useLocation } from "react-router-dom";
 
 const Male = () => {
+  const { pathname } = useLocation();
   return (
     <Helmet title="Thời trang nam">
       <HeroSlider
-        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("man")}
-        dataSliderMd={dataSliderMd.getSliderMdByPage("man")}
+        dataSliderDk={dataSliderDesktop.getSliderDesktopByPath(pathname)}
+        dataSliderMd={dataSliderMd.getSliderMdByPath(pathname)}
       />
       <Servicer />
       <Section>
         <SectionTitle>MUA THEO THỂ LOẠI</SectionTitle>
         <SectionCategory
-          dataCategory={dataCategorySection.getImageCateByPage("man")}
+          dataCategory={dataCategorySection.getImageCateByPath(pathname)}
         />
       </Section>
       <Section>
         <SectionTitle>MUA THEO PHONG CÁCH</SectionTitle>
         <SectionCateStyle
-          dataBannerCate={dataBannerCate.getBannerCateByPage("man")}
+          dataBannerCate={dataBannerCate.getBannerCateByPath(pathname)}
         />
       </Section>
       <Section backgroundColor="beige">
         <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
         <SectionProduct
-          dataProduct={dataProducts.getProductByInfo("man").slice(0, 15)}
+          dataProduct={dataProducts
+            .getProductByPath("/product-male")
+            .slice(0, 15)}
         />
       </Section>
       <Section backgroundColor="azure">
         <SectionTitle>#YODYLOVE</SectionTitle>
         <SectionBody dataNew={dataNews.getAllNews()} />
       </Section>
-      <Footer />
     </Helmet>
   );
 };

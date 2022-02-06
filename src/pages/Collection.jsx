@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const Collection = () => {
-    return (
-        <div>
-            Bộ sưu tập
-        </div>
-    )
-}
+const Collection = (props) => {
+    
+  return <div>Bộ sưu tập</div>;
+};
 
-export default Collection
+export default Collection;

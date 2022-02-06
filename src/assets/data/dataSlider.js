@@ -17,81 +17,125 @@ import image_sliderMd_07 from "../images/page_treem_slider_1_mb.jpg";
 
 const SliderDesktop = [
   {
-    image: image_slider_01,
-    page: "home",
+    path: "/",
+    slide: [
+      {
+        image: image_slider_01,
+      },
+      {
+        image: image_slider_02,
+      },
+      {
+        image: image_slider_03,
+      },
+      {
+        image: image_slider_04,
+      },
+    ],
   },
   {
-    image: image_slider_02,
-    page: "home",
+    path: "/male",
+    slide: [
+      {
+        image: image_slider_05,
+      },
+      {
+        image: image_slider_06,
+      },
+    ],
   },
   {
-    image: image_slider_03,
-    page: "home",
+    path: "/female",
+    slide: [
+      {
+        image: image_slider_07,
+      },
+    ],
   },
   {
-    image: image_slider_04,
-    page: "home",
-  },
-  {
-    image: image_slider_05,
-    page: "man",
-  },
-  {
-    image: image_slider_06,
-    page: "man",
-  },
-  {
-    image: image_slider_07,
-    page: "woman",
-  },
-  {
-    image: image_slider_08,
-    page: "children",
+    path: "/children",
+    slide: [
+      {
+        image: image_slider_08,
+      },
+    ],
   },
 ];
 
 const SliderMd = [
   {
-    image: image_sliderMd_01,
-    page: "home",
+    path: "/",
+    slide: [
+      {
+        image: image_sliderMd_01,
+      },
+      {
+        image: image_sliderMd_02,
+      },
+      {
+        image: image_sliderMd_03,
+      },
+      {
+        image: image_sliderMd_04,
+      },
+    ],
+  },
+
+  {
+    path: "/male",
+    slide: [
+      {
+        image: image_sliderMd_05,
+      },
+    ],
+  },
+
+  {
+    path: "/female",
+    slide: [
+      {
+        image: image_sliderMd_06,
+      },
+    ],
   },
   {
-    image: image_sliderMd_02,
-    page: "home",
-  },
-  {
-    image: image_sliderMd_03,
-    page: "home",
-  },
-  {
-    image: image_sliderMd_04,
-    page: "home",
-  },
-  {
-    image: image_sliderMd_05,
-    page: "man",
-  },
-  {
-    image: image_sliderMd_06,
-    page: "woman",
-  },
-  {
-    image: image_sliderMd_07,
-    page: "children",
+    path: "/children",
+    slide: [
+      {
+        image: image_sliderMd_07,
+      },
+    ],
   },
 ];
 
-const getSliderDesktopByPage = (page) =>
-  SliderDesktop.filter((e) => e.page === page);
-
-const dataSliderDesktop = {
-  getSliderDesktopByPage,
+const getSliderDesktopByPath = (path) => {
+  const slide = [];
+  SliderDesktop.filter((e) => {
+    if (e.path === path) {
+      slide.push(e);
+    }
+    return slide;
+  });
+  return slide[0].slide;
 };
 
-const getSliderMdByPage = (page) => SliderMd.filter((e) => e.page === page);
+const dataSliderDesktop = {
+  getSliderDesktopByPath,
+};
+
+const getSliderMdByPath = (path) => {
+  const slide = [];
+  SliderMd.filter((e) => {
+    if (e.path === path) {
+      slide.push(e);
+    }
+    return slide;
+  });
+  return slide[0].slide;
+};
 
 export const dataSliderMd = {
-  getSliderMdByPage,
+  getSliderMdByPath,
 };
 
 export default dataSliderDesktop;

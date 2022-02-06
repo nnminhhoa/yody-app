@@ -1,11 +1,11 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import dataCategorySection, {
   dataBannerCate,
 } from "../assets/data/dataCategorySection";
 import dataNews from "../assets/data/dataNews";
 import dataProducts from "../assets/data/dataProducts";
 import dataSliderDesktop, { dataSliderMd } from "../assets/data/dataSlider";
-import Footer from "../components/Footer/Footer";
 import Helmet from "../components/Helmet/Helmet";
 import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Section, {
@@ -18,36 +18,38 @@ import Section, {
 import Servicer from "../components/Servicer/Servicer";
 
 const FeMale = () => {
+  const { pathname } = useLocation();
   return (
     <Helmet title="Thời trang nữ">
       <HeroSlider
-        dataSliderDk={dataSliderDesktop.getSliderDesktopByPage("woman")}
-        dataSliderMd={dataSliderMd.getSliderMdByPage("woman")}
+        dataSliderDk={dataSliderDesktop.getSliderDesktopByPath(pathname)}
+        dataSliderMd={dataSliderMd.getSliderMdByPath(pathname)}
       />
       <Servicer />
       <Section>
         <SectionTitle>MUA THEO THỂ LOẠI</SectionTitle>
         <SectionCategory
-          dataCategory={dataCategorySection.getImageCateByPage("woman")}
+          dataCategory={dataCategorySection.getImageCateByPath(pathname)}
         />
       </Section>
       <Section>
         <SectionTitle>MUA THEO PHONG CÁCH</SectionTitle>
         <SectionCateStyle
-          dataBannerCate={dataBannerCate.getBannerCateByPage("woman")}
+          dataBannerCate={dataBannerCate.getBannerCateByPath(pathname)}
         />
       </Section>
       <Section backgroundColor="beige">
         <SectionTitle>ĐỀ XUẤT CHO BẠN</SectionTitle>
         <SectionProduct
-          dataProduct={dataProducts.getProductByInfo("woman").slice(0, 15)}
+          dataProduct={dataProducts
+            .getProductByPath("/product-female")
+            .slice(0, 15)}
         />
       </Section>
       <Section backgroundColor="azure">
         <SectionTitle>#YODYLOVE</SectionTitle>
         <SectionBody dataNew={dataNews.getAllNews()} />
       </Section>
-      <Footer />
     </Helmet>
   );
 };

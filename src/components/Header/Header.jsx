@@ -20,7 +20,7 @@ const Header = () => {
     if (prevScrollpos < currentScrollPos) {
       headerRef.current.classList.add("toggle-header");
     } else {
-      headerRef?.current.classList.remove("toggle-header");
+      headerRef.current.classList.remove("toggle-header");
     }
     prevScrollpos = currentScrollPos;
   };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import numberWithCommas from "../../utils/numberWithCommas";
 import removeAccents from "../../utils/removeAccents";
@@ -6,11 +6,12 @@ import "./Products.scss";
 
 const Products = (props) => {
   const products = props.item;
+  const sale = props.item?.sale;
+  const priceSale = props.item?.price * ((100 - sale) / 100);
+  const [color, setColor] = useState();
+
   return (
-    <div
-      key={products.id}
-      className={`product-card ${props.slider ? "product_slider" : ""}`}
-    >
+    <div className={`product-card ${props.slider ? "product_slider" : ""}`}>
       <Link to={`/${removeAccents(products.title)}`}>
         <div className="product-card__image">
           <img src={products.image} alt={products.title} />
@@ -20,7 +21,7 @@ const Products = (props) => {
         </div>
         <div className="product-card__price">
           <div className="product-card__price-sale">
-            {numberWithCommas(Math.round(products.price / 10000) * 10000)}đ
+            {numberWithCommas(Math.round(priceSale / 10000) * 10000)}đ
           </div>
           {products.sale !== 0 ? (
             <div className="product-card__price-origin">
@@ -31,6 +32,17 @@ const Products = (props) => {
           )}
         </div>
       </Link>
+      <div className="product-color">
+        {props.item.color?.map((item, index) => (
+          <div
+            className={`product-color_item bg-${item} ${
+              color === item ? "active" : ""
+            }`}
+            key={index}
+            onClick={() => setColor(item)}
+          ></div>
+        ))}
+      </div>
       {products.sale !== 0 ? (
         <div className="product-card__sale">
           <svg

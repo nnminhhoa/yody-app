@@ -6,11 +6,8 @@ const HeroSlider = (props) => {
   const ref = useRef();
   const toggleRef = useRef();
   const handleScroll = () => {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
       toggleRef.current.classList.add("toggle-slider");
-    }
-    if (!toggleRef) {
-      return;
     } else {
       toggleRef.current.classList.remove("toggle-slider");
     }
