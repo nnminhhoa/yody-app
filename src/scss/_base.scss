@@ -75,6 +75,21 @@ img {
   }
 }
 
+.container-medium {
+  width: 100%;
+  max-width: 1020px;
+  padding: 0 10px;
+  margin: auto;
+
+  @include tablet {
+    padding: 0 25px;
+  }
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+
 .main {
   margin-top: $header-height;
   margin-bottom: 2rem;

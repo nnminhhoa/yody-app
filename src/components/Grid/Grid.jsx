@@ -18,10 +18,10 @@ const Grid = (props) => {
 };
 
 Grid.propTypes = {
-  col: PropTypes.number,
-  mdCol: PropTypes.number,
-  smCol: PropTypes.number,
-  gap: PropTypes.number,
+  col: PropTypes.any,
+  mdCol: PropTypes.any,
+  smCol: PropTypes.any,
+  gap: PropTypes.any,
 };
 
 export default Grid;

@@ -91,6 +91,11 @@
       transform: translateX(-100%);
     }
   }
+  .slick-slide {
+    & > *:first-child {
+      display: flex;
+    }
+  }
   .slick-dots {
     position: absolute;
     bottom: 5px !important;

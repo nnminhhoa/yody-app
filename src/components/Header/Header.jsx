@@ -8,10 +8,14 @@ import navHeader from "../../assets/data/dataNavHeader";
 const Header = () => {
   const menuRef = useRef();
   const headerRef = useRef();
+  const menuOpacityRef = useRef();
   const { pathname } = useLocation();
   const activeNav = navHeader.findIndex((e) => e.path === pathname);
 
-  const handleToggleMenu = () => menuRef.current.classList.toggle("active");
+  const handleToggleMenu = () => {
+    menuRef.current.classList.toggle("active");
+    menuOpacityRef.current.classList.toggle("active");
+  };
 
   let prevScrollpos = window.pageYOffset;
 
@@ -22,6 +26,7 @@ const Header = () => {
     } else {
       headerRef.current.classList.remove("toggle-header");
     }
+
     prevScrollpos = currentScrollPos;
   };
   return (
@@ -89,8 +94,13 @@ const Header = () => {
             </svg>
           </Link>
         </div>
-        <nav className="header-main__nav" ref={menuRef}>
-          <div className="header-main__nav-list">
+        <nav className="header-main__nav">
+          <div
+            className="header-main__nav-opacity"
+            ref={menuOpacityRef}
+            onClick={handleToggleMenu}
+          ></div>
+          <div className="header-main__nav-list" ref={menuRef}>
             <ul>
               {navHeader.map((item, index) => (
                 <li key={index}>

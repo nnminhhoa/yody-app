@@ -25,7 +25,7 @@ const Home = () => {
         dataSliderDk={dataSliderDesktop.getSliderDesktopByPath(pathname)}
         dataSliderMd={dataSliderMd.getSliderMdByPath(pathname)}
       />
-      <Servicer />
+      <Servicer col={4} mdCol={2} smCol={2} gap={15} />
       <Section backgroundColor="beige">
         <SectionTitle>SALE UPTO 60%</SectionTitle>
         <SectionBanner banner={bannerImage_1} />

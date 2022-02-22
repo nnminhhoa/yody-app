@@ -4,22 +4,12 @@
   &-card {
     position: relative;
     @include tablet {
-      margin: -5px;
+      margin: 0 -5px;
     }
 
     &__image {
-      height: 300px;
       overflow: hidden;
-
-      @include tablet {
-        height: 237px;
-        width: 180px;
-      }
-
-      @include mobile {
-        width: 173px;
-        height: 230px;
-      }
+      display: flex;
 
       img {
         transform: scale(1);
@@ -160,7 +150,7 @@
     @include mobile {
       margin-top: 8px;
     }
-      
+
     & > * {
       width: 32px;
       height: 32px;

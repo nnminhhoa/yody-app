@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Products from "../Products/Products";
 import Slider from "react-slick";
 import "./Section.scss";
@@ -7,6 +7,7 @@ import Button from "../Button/Button";
 import Grid from "../Grid/Grid";
 import News from "../News/News";
 import { Link, useLocation } from "react-router-dom";
+import { memo } from "react";
 
 const Section = (props) => {
   const bg = props.backgroundColor ? "bg-" + props.backgroundColor : "bg-main";
@@ -149,13 +150,23 @@ export const SectionBody = (props) => {
   );
 };
 
-export const SectionProduct = (props) => {
+export const SectionProduct = memo(function SectionProduct(props) {
   const { pathname } = useLocation();
+  const containerMd = props.containerMd;
+  const colCatalog = props.col;
+  const mdColCatalog = props.mdCol;
+  const smColCatalog = props.smCol;
+  const gap = props.gap;
 
   return (
-    <div className="container">
+    <div className={`${containerMd ? "container-medium" : "container"}`}>
       <div className="section-product">
-        <Grid col={5} mdCol={4} smCol={2} gap={20}>
+        <Grid
+          col={`${colCatalog ? colCatalog : 5}`}
+          mdCol={`${mdColCatalog ? mdColCatalog : 4}`}
+          smCol={`${smColCatalog ? smColCatalog : 2}`}
+          gap={gap ? gap : 20}
+        >
           {props.dataProduct?.map((item, index) => (
             <Products key={index} item={item} />
           ))}
@@ -166,7 +177,7 @@ export const SectionProduct = (props) => {
       </Link>
     </div>
   );
-};
+});
 
 export const SectionCategory = (props) => {
   return (

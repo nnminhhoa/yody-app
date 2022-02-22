@@ -18,6 +18,10 @@
     @include tablet {
       top: 60vh;
     }
+
+    @include mobile {
+      top: 59vh;
+    }
   }
 }
 .visible {

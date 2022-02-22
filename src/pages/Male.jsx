@@ -25,7 +25,7 @@ const Male = () => {
         dataSliderDk={dataSliderDesktop.getSliderDesktopByPath(pathname)}
         dataSliderMd={dataSliderMd.getSliderMdByPath(pathname)}
       />
-      <Servicer />
+      <Servicer col={4} mdCol={2} smCol={2} gap={15} />
       <Section>
         <SectionTitle>MUA THEO THỂ LOẠI</SectionTitle>
         <SectionCategory

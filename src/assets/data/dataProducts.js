@@ -76,7 +76,6 @@ import imageMan_28 from "../images-products/image-man/products (28).jpg";
 import imageMan_29 from "../images-products/image-man/products (29).jpg";
 import imageMan_30 from "../images-products/image-man/products (30).jpg";
 import imageMan_31 from "../images-products/image-man/products (31).jpg";
-import removeAccents from "../../utils/removeAccents";
 
 const products = [
   {
@@ -127,6 +126,7 @@ const products = [
         hot: true,
         sale: 60,
         slug: "ao-phao-nu-bong-mo-dang-dai-rut-eo-sieu-am",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink"],
         detail: [
           {
@@ -163,6 +163,7 @@ const products = [
         price: 1289000,
         sale: 10,
         slug: "ao-phao-nu-bong-mo-dang-dai-rut-eo-sieu-am-co-mu",
+        size: ["m", "l", "xl"],
         color: ["be", "yellow", "pink", "white"],
         detail: [
           {
@@ -200,6 +201,7 @@ const products = [
         hot: true,
         sale: 60,
         slug: "ao-polo-nu-cafe-phoi-nep-sieu-nhe-sieu-mat",
+        size: ["s", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -236,6 +238,7 @@ const products = [
         price: 799000,
         sale: 50,
         slug: "ao-phao-nu-om-sieu-nhe-co-mu",
+        size: ["s", "m", "l", "xl"],
         color: ["be", "yellow", "pink", "white"],
         detail: [
           {
@@ -273,6 +276,7 @@ const products = [
         hot: true,
         sale: 50,
         slug: "chan-vay-chu-a-hoa-tiet",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -310,6 +314,7 @@ const products = [
         hot: true,
         sale: 28,
         slug: "chan-vay-ngan-hoa-hoa-tiet",
+        size: ["m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -346,6 +351,7 @@ const products = [
         price: 699000,
         sale: 60,
         slug: "ao-phao-thoi-trang-nu-nhieu-mau",
+        size: ["s", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -382,6 +388,7 @@ const products = [
         price: 500000,
         sale: 28,
         slug: "vay-ke-hoa-tiet-thoi-trang",
+        size: ["s", "m"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -418,6 +425,7 @@ const products = [
         price: 679000,
         sale: 60,
         slug: "ao-phao-nu-sieu-nhe-co-mu-sieu-am",
+        size: ["s"],
         color: ["be", "yellow", "pink", "white"],
         detail: [
           {
@@ -455,6 +463,7 @@ const products = [
         hot: true,
         sale: 60,
         slug: "vay-thoi-trang-phong-cach-tre-trung",
+        size: ["s", "m", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -492,6 +501,7 @@ const products = [
         hot: true,
         sale: 60,
         slug: "ao-khoac-gio-nu-loang-mau-co-mu",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -529,6 +539,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-polo-nu-tay-ngan-pique-mat-chim-phoi-bo-thoang-khi",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "yellow", "pink", "white"],
         detail: [
           {
@@ -566,6 +577,7 @@ const products = [
         hot: true,
         sale: 20,
         slug: "ao-polo-nu-coolmax-ngan-tay-phoi-bo",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -603,6 +615,7 @@ const products = [
         hot: true,
         sale: 20,
         slug: "ao-polo-nu-coolmax-lacoste",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -640,6 +653,7 @@ const products = [
         hot: true,
         sale: 20,
         slug: "ao-khoac-gio-nu-loang-mau-co-mu",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -677,6 +691,7 @@ const products = [
         hot: true,
         sale: 20,
         slug: "ao-polo-nu-phong-cach-co-dien",
+        size: ["s", "m", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -714,6 +729,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-polo-nu-cong-so-basic",
+        size: ["l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -751,6 +767,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-body-co-co-cho-nu",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -788,6 +805,7 @@ const products = [
         hot: true,
         sale: 10,
         slug: "quan-jean-nu-ngan-phong-cach",
+        size: ["s", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -825,6 +843,7 @@ const products = [
         hot: true,
         sale: 20,
         slug: "quan-kaki-nu-thoi-trang",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -862,6 +881,7 @@ const products = [
         hot: true,
         sale: 10,
         slug: "quan-jean-cong-so-tre-trung",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -899,6 +919,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "quan-jean-bac-mau-thoi-trang",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -936,6 +957,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "quan-jean-nu-rach-goi",
+        size: ["l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -973,6 +995,7 @@ const products = [
         hot: true,
         sale: 10,
         slug: "ao-so-mi-nu-ke-caro",
+        size: ["s", "m", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1010,6 +1033,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-so-mi-nu-co-no-beo-tay",
+        size: ["s", "m", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1047,6 +1071,7 @@ const products = [
         hot: true,
         sale: 10,
         slug: "ao-thun-nu-co-tron-tay-bong-bo-chun",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1084,6 +1109,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-thun-nu-co-tron-tay-rut-bong",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1126,6 +1152,7 @@ const products = [
         price: 350000,
         sale: 30,
         slug: "ao-polo-nam-thoi-trang-4-mua",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1163,6 +1190,7 @@ const products = [
         hot: true,
         sale: 22,
         slug: "ao-polo-nam-cafe-phoi-nep-tham-hut-mo-hoi",
+        size: ["s", "m", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1199,6 +1227,7 @@ const products = [
         price: 350000,
         sale: 28,
         slug: "ao-so-mi-ke-caro-nam-da-dang",
+        size: ["s", "xxl"],
         color: ["blue", "yellow", "pink", "white"],
         detail: [
           {
@@ -1235,6 +1264,7 @@ const products = [
         price: 500000,
         sale: 10,
         slug: "quan-jean-nam-ong-suong-xuoc-nhe",
+        size: ["s", "m", "l", "xxl"],
         color: ["pink", "black"],
         detail: [
           {
@@ -1271,6 +1301,7 @@ const products = [
         price: 499000,
         sale: 20,
         slug: "ao-so-mi-nam-tay-dai-vai-hoa-tiet-den",
+        size: ["l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1307,6 +1338,7 @@ const products = [
         price: 689000,
         sale: 28,
         slug: "ao-so-mi-nam-tay-dai-cafe-melange-sieu-mat-khu-mui",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "pink", "white"],
         detail: [
           {
@@ -1343,6 +1375,7 @@ const products = [
         price: 689000,
         sale: 28,
         slug: "ao-khoac-gio-nam-the-thao-phoi-lung",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1380,6 +1413,7 @@ const products = [
         hot: true,
         sale: 0,
         slug: "ao-ao-polo-nam-coolmax-lacoste",
+        size: ["s", "xl", "xxl"],
         color: ["blue", "be", "black", "white"],
         detail: [
           {
@@ -1416,6 +1450,7 @@ const products = [
         price: 549000,
         sale: 18,
         slug: "quan-jean-nam-ong-suong-co-gian-thoang-mat",
+        size: ["s", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1452,6 +1487,7 @@ const products = [
         price: 549000,
         sale: 5,
         slug: "quan-jean-nam-ong-suong-den-tron",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["yellow", "pink", "white"],
         detail: [
           {
@@ -1488,6 +1524,7 @@ const products = [
         price: 250000,
         sale: 5,
         slug: "ao-so-mi-nam-tay-dai-ke-soc-caro",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "pink", "white"],
         detail: [
           {
@@ -1524,6 +1561,7 @@ const products = [
         price: 549000,
         sale: 28,
         slug: "ao-so-mi-nam-dai-tay-cafe-melange-khu-mui-khang-khuan",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1560,6 +1598,7 @@ const products = [
         price: 449000,
         sale: 28,
         slug: "ao-so-mi-nam-tay-ngan-nano-chong-nhan-khu-mui",
+        size: ["s", "m"],
         color: ["blue", "white"],
         detail: [
           {
@@ -1596,6 +1635,7 @@ const products = [
         price: 549000,
         sale: 18,
         slug: "ao-so-mi-nam-tay-ngan-cafe-melange-thoang-khi-khu-mui",
+        size: ["s", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1632,6 +1672,7 @@ const products = [
         price: 449000,
         sale: 28,
         slug: "ao-so-mi-nam-ngan-tay-cafe-co-tui",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1668,6 +1709,7 @@ const products = [
         price: 379000,
         sale: 8,
         slug: "ao-polo-nam-cafe-phoi-nep-tham-hut-mo-hoi",
+        size: ["m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1704,6 +1746,7 @@ const products = [
         price: 499000,
         sale: 0,
         slug: "ao-so-mi-nam-trang-dai-tay-nano-khang-khuan-chong-nhan",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1740,6 +1783,7 @@ const products = [
         price: 549000,
         sale: 10,
         slug: "quan-jean-nam-cotton-usa-slimfit-ben-mau",
+        size: ["xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1776,6 +1820,7 @@ const products = [
         price: 549000,
         sale: 28,
         slug: "ao-so-mi-nam-cong-so-tui-bo",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1812,6 +1857,7 @@ const products = [
         price: 1259000,
         sale: 50,
         slug: "ao-khoac-phao-nam-co-mu-sieu-nhe",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1848,6 +1894,7 @@ const products = [
         price: 689000,
         sale: 28,
         slug: "ao-phao-nam-sieu-nhe-co-mu-sieu-am",
+        size: ["xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1884,6 +1931,7 @@ const products = [
         price: 700000,
         sale: 28,
         slug: "ao-phao-nam-co-mu-sieu-nhe-hai-mat",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1920,6 +1968,7 @@ const products = [
         price: 549000,
         sale: 28,
         slug: "ao-so-mi-nam-dai-tay-cong-so",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1956,6 +2005,7 @@ const products = [
         price: 1000000,
         sale: 28,
         slug: "ao-khoac-nam-co-mu-chong-ngam-nuoc-thoi-trang",
+        size: ["l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -1992,6 +2042,7 @@ const products = [
         price: 1259000,
         sale: 50,
         slug: "ao-khoac-nam-co-mu-chong-ngam-nuoc",
+        size: ["l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2028,6 +2079,7 @@ const products = [
         price: 549000,
         sale: 28,
         slug: "ao-khoac-gio-nam-the-thao-sup-suon",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2064,6 +2116,7 @@ const products = [
         price: 549000,
         sale: 28,
         slug: "ao-khoac-gio-nam-loang-mau-co-mu",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2100,6 +2153,7 @@ const products = [
         price: 349000,
         sale: 8,
         slug: "ao-polo-nam-pique-mat-chim-basic-co-gian-thoang-khi",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2136,6 +2190,7 @@ const products = [
         price: 379000,
         sale: 22,
         slug: "ao-polo-nam-cafe-phoi-nep-tham-hut-mo-hoi",
+        size: ["s", "m", "l", "xl", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2172,6 +2227,7 @@ const products = [
         price: 379000,
         sale: 22,
         slug: "ao-polo-nam-cafe-bo-tron-khu-khuan-thoang-khi",
+        size: ["s", "xxl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2208,6 +2264,7 @@ const products = [
         price: 350000,
         sale: 28,
         slug: "ao-polo-nam-vai-hau-phoi-vai",
+        size: ["m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2250,6 +2307,7 @@ const products = [
         price: 229000,
         sale: 0,
         slug: "ao-polo-cho-be-cafe-phoi-bo",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2287,6 +2345,7 @@ const products = [
         hot: true,
         sale: 10,
         slug: "ao-polo-tre-em-pima-thoi-trang",
+        size: ["s", "m", "l", "xl"],
         color: ["be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2323,6 +2382,7 @@ const products = [
         price: 200000,
         sale: 0,
         slug: "ao-polo-tre-em-coolmax-phoi-co",
+        size: ["s", "l", "xl"],
         color: ["yellow", "pink", "white"],
         detail: [
           {
@@ -2359,6 +2419,7 @@ const products = [
         price: 229000,
         sale: 0,
         slug: "ao-polo-tre-em-airycool-bo-ke",
+        size: ["s", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2395,6 +2456,7 @@ const products = [
         price: 199000,
         sale: 0,
         slug: "ao-polo-tre-em-coolmax-basic",
+        size: ["s", "m", "xl"],
         color: ["black", "pink", "white"],
         detail: [
           {
@@ -2432,6 +2494,7 @@ const products = [
         sale: 15,
         slug: "ao-polo-tre-em-mat-chim-phoi-bo-co-gian-thoang-khi",
         hot: true,
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2468,6 +2531,7 @@ const products = [
         price: 269000,
         sale: 20,
         slug: "ao-polo-cho-be-cafe-phoi-bo",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2504,6 +2568,7 @@ const products = [
         price: 400000,
         sale: 20,
         slug: "quan-jean-tre-em-ong-suong-cap-chun",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "pink", "white"],
         detail: [
           {
@@ -2541,6 +2606,7 @@ const products = [
         sale: 10,
         slug: "quan-jean-baggy-tre-em-cap-chun-basic",
         hot: true,
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow"],
         detail: [
           {
@@ -2577,6 +2643,7 @@ const products = [
         price: 389000,
         sale: 0,
         slug: "ao-polo-tre-em-coolmax-sieu-mat-phoi-bo",
+        size: ["s", "m"],
         color: ["blue", "black", "pink", "white"],
         detail: [
           {
@@ -2613,6 +2680,7 @@ const products = [
         price: 229000,
         sale: 10,
         slug: "ao-polo-tre-em-cafe-ngan-tay-phoi-bo-khang-khuan-khu-mui",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2649,6 +2717,7 @@ const products = [
         price: 229000,
         sale: 0,
         slug: "ao-polo-tre-em-cafe-bo-tron",
+        size: ["s", "m"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2685,6 +2754,7 @@ const products = [
         price: 250000,
         sale: 20,
         slug: "ao-polo-tre-em-pima",
+        size: ["s", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2721,6 +2791,7 @@ const products = [
         price: 199000,
         sale: 0,
         slug: "ao-polo-tre-em-coolmax-phoi-co",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2757,6 +2828,7 @@ const products = [
         price: 199000,
         sale: 0,
         slug: "ao-polo-tre-em-airycool-bo-ke",
+        size: ["s", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2793,6 +2865,7 @@ const products = [
         price: 199000,
         sale: 10,
         slug: "ao-polo-tre-em-coolmax-basic",
+        size: ["s", "m", "l", "xl"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2829,6 +2902,7 @@ const products = [
         price: 199000,
         sale: 10,
         slug: "ao-polo-tre-em-mat-chim-phoi-bo-co-gian-thoang-khi",
+        size: ["s", "m", "l"],
         color: ["blue", "be", "yellow", "pink", "white"],
         detail: [
           {
@@ -2863,26 +2937,30 @@ const products = [
   },
 ];
 
+
 const getProductBySlug = (slug) => {
   const item = [];
   products.forEach((e) => {
-    return item.push(e.product);
+    e.product.filter((e) => {
+      return item.push(e);
+    });
   });
-  return item[0].concat(...item).find((e) => e.slug === slug);
+  return item.find((e) => e.slug === slug);
 };
 
 const getProductSale = (count) => {
   const productSale = [];
   products.forEach((e) => {
-    const itemSale = e.product.filter((e) => e.sale !== 0);
-    return productSale.push(itemSale);
+    e.product.filter((e) => {
+      if (e.sale !== 0) productSale.push(e);
+      return undefined;
+    });
   });
-
-  const max = productSale[0].concat(...productSale).length - count;
-  const min = 0;
-  const start = Math.floor(Math.random() * (max - min) + min);
-
-  return productSale[0].concat(...productSale).slice(start, start + count);
+  // Shuffle array
+  const shuffled = productSale.sort(() => 0.5 - Math.random());
+  // Get sub-array of first n elements after shuffled
+  let selected = shuffled.slice(0, count);
+  return selected;
 };
 
 const getProductByPath = (path) => {

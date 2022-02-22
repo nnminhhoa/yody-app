@@ -6,12 +6,18 @@ import iconImages2 from "../../assets/images-icon/ser_2.png";
 import iconImages3 from "../../assets/images-icon/ser_3.png";
 import iconImages4 from "../../assets/images-icon/ser_4.png";
 
-const Servicer = () => {
+const Servicer = (props) => {
+  const col = props.col;
+  const mdCol = props.mdCol;
+  const smCol = props.smCol;
+  const gap = props.gap;
+  const servicerCatalog = props.servicerCatalog;
+  
   return (
     <div className="services">
-      <div className="container">
+      <div className={`container ${servicerCatalog ? "container-medium" : ""}`}>
         <div className="service-list">
-          <Grid col={4} mdCol={2} smCol={2} gap={15}>
+          <Grid col={col} mdCol={mdCol} smCol={smCol} gap={gap}>
             <div className="service-list__item">
               <div className="service-list__item-left">
                 <img src={iconImages1} alt="" />

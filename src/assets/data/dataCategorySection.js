@@ -36,6 +36,14 @@ import imageCateStyle_09 from "../images-category/page_nu_banner_4.jpg";
 import imageCateStyle_10 from "../images-category/page_nu_banner_5.jpg";
 import imageCateStyle_11 from "../images-category/page_treem_banner_1.jpg";
 
+import imageSocial_01 from "../images-icon/social_1_mb.png";
+import imageSocial_02 from "../images-icon/social_2_mb.png";
+import imageSocial_03 from "../images-icon/social_3_mb.png";
+import imageSocial_04 from "../images-icon/social_4_mb.png";
+import imageSocial_05 from "../images-icon/social_5_mb.png";
+import imageSocial_06 from "../images-icon/social_6_mb.png";
+import imageSocial_07 from "../images-icon/social_7_mb.png";
+
 const imageCategory = [
   {
     path: "/male",
@@ -265,6 +273,36 @@ const imageBannerCate = [
     path: "/children",
   },
 ];
+
+const imageSocial = [
+  {
+    image: imageSocial_01,
+  },
+  {
+    image: imageSocial_02,
+  },
+  {
+    image: imageSocial_03,
+  },
+  {
+    image: imageSocial_04,
+  },
+  {
+    image: imageSocial_05,
+  },
+  {
+    image: imageSocial_06,
+  },
+  {
+    image: imageSocial_07,
+  },
+];
+
+const getImageSocial = () => imageSocial;
+
+export const dataSocial = {
+  getImageSocial,
+};
 
 const getImageCateByPath = (path) => {
   const images = [];
